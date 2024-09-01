@@ -3,7 +3,10 @@
 # K = 1 
 # 
 # enquanto K < INDICE 
-# faça { K = K + 1; SOMA = SOMA + K; } 
+# faça { 
+# K = K + 1; 
+# SOMA = SOMA + K; 
+# } 
 # 
 # imprimir(SOMA);
 
