@@ -4,7 +4,7 @@ def processar_faturamento(arquivo_json):
     with open(arquivo_json, 'r') as f:
         dados = json.load(f)
 
-    faturamentos = [item['valor'] for item in dados['faturamento_diario']]
+    faturamentos = [item['valor'] for item in dados]
 
     faturamentos_validos = [valor for valor in faturamentos if valor > 0]
 
@@ -17,7 +17,7 @@ def processar_faturamento(arquivo_json):
     return menor_valor, maior_valor, dias_acima_media
 
 
-arquivo_json = "faturamento_diario/faturamento.json"
+arquivo_json = "faturamento_diario/dados.json"
 menor, maior, dias_acima_media = processar_faturamento(arquivo_json)
 
 print(f"Menor valor: {menor}")
